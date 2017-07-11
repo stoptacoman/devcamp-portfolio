@@ -8,5 +8,5 @@
   <p><%= t.name%></p>
 <% end %>
 
-<%= link_to 'Edit', edit_portfolio_path(@portfolio_item.id) %>
+<%= link_to 'Edit', edit_portfolio_path(@portfolio_item.id) if logged_in?(:site_admin) %>
 <%= link_to 'Back to Portfolio', portfolios_path %>
